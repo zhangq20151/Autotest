@@ -1,0 +1,9 @@
+下载网址：
+https://repo1.maven.org/maven2/com/github/dreamhead/moco-runner/0.11.0/
+启动脚本：
+java -jar ./moco-runner-0.11.0-standalone.jar [server type] -p 8888 -c [configuration file]
+java -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startup1.json
+启动后，使用localhost:8888/demo打开第一个demo（有乱码，下面为修改的脚本，加上了UTF-8）
+java -Dfile.encoding=UTF-8 -jar ./moco-runner-0.11.0-standalone.jar http -p 8888 -c startup1.json
+
+如果启动的是POST请求的moco,那么需要jmeter工具的帮助
