@@ -41,17 +41,16 @@ public class MyPostMethod {
     @ApiOperation(value = "获取用户列表", httpMethod = "POST")
     public String getUsetList(HttpServletRequest request,
                             @RequestBody User u) {
-
         User user;
 
         //获取cookies
         Cookie[] cookies = request.getCookies();
         //验证cookies是否合法
         for (Cookie c : cookies) {
-            if (c.getName() == "login"
-                    && c.getValue() == "true"
-                    && u.getUserName() == "zhangsan"
-                    && u.getPassWord() == "123456") {
+            if (c.getName().equals("login")
+                    && c.getValue().equals("true")
+                    && u.getUserName().equals("zhangsan")
+                    && u.getPassWord().equals("123456")) {
 
                 user = new User();
                 user.setName("lisi");
