@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatic.ory//DTD Mapper 3.0//EN"
-        "http://mybatic.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.course">
+<mapper namespace="com.course.model">
     <!--登录接口sql -->
     <select id="login" parameterType="com.course.model.User" resultType="Integer">
         select count(*) from user
@@ -22,7 +22,7 @@
         select * from user
         <trim prefix="WHERE" prefixOverrides="and">
             <if test="null != id and '' != id">
-                id = #{id}
+                AND id = #{id}
             </if>
             <if test="null != userName and '' != userName">
                 AND userName = #{userName}
@@ -45,7 +45,7 @@
         </trim>
     </select>
     <!--更新/删除用户信息-->
-    <select id="updateUserInfo" parameterType="com.course.model.User" resultType="com.course.model.User">
+    <update id="updateUserInfo" parameterType="com.course.model.User">
         update user
         <trim prefix="SET" suffixOverrides=",">
             <if test="null != userName and '' != userName">
@@ -64,7 +64,8 @@
                 isDelete = #{isDelete},
             </if>
         </trim>
-    </select>
+        where id = #{id}
+    </update>
 
 </mapper>
 

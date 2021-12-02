@@ -46,7 +46,7 @@ public class UserManager {
     }
 
     @ApiOperation(value = "添加用户接口", httpMethod = "POST")
-    @RequestMapping(value = "/adduser", method = RequestMethod.POST)
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
     public boolean addUser(HttpServletRequest request, @RequestBody User user) {
         Boolean x = verifyCookies(request);
         int result = 0;
@@ -61,7 +61,7 @@ public class UserManager {
     }
 
     @ApiOperation(value = "获取用户（列表）信息接口", httpMethod = "POST")
-    @RequestMapping(value = "getUserInfo", method = RequestMethod.POST)
+    @RequestMapping(value = "/getUserInfo", method = RequestMethod.POST)
     public List<User> getUserInfo(HttpServletRequest request, @RequestBody User user) {
         Boolean x = verifyCookies(request);
         if (x == true) {
