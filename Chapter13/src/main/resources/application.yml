@@ -10,7 +10,7 @@ spring:
     name: userManager
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/course
+    url: jdbc:mysql://localhost:3306/course?serverTimezone=GMT
     username: root
     password: 1234
 
