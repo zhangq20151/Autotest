@@ -1,7 +1,9 @@
-2021-12-08 23:58:55.439 [http-nio-8888-exec-5] INFO  com.course.controller.UserManager - 查询到的结果是1
-2021-12-08 23:58:55.443 [http-nio-8888-exec-5] INFO  com.course.controller.UserManager - 登录的用户是：zhangsan
-2021-12-08 23:58:55.902 [http-nio-8888-exec-10] INFO  com.course.controller.UserManager - cookies验证通过
-2021-12-08 23:58:55.933 [http-nio-8888-exec-10] ERROR o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+2021-12-07 00:33:31.541 [http-nio-8888-exec-3] INFO  com.course.controller.UserManager - 查询到的结果是1
+2021-12-07 00:33:31.544 [http-nio-8888-exec-3] INFO  com.course.controller.UserManager - 登录的用户是：zhangsan
+2021-12-07 00:33:32.082 [http-nio-8888-exec-4] INFO  com.course.controller.UserManager - cookies验证通过
+2021-12-07 00:33:32.164 [http-nio-8888-exec-4] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2021-12-07 00:33:32.637 [http-nio-8888-exec-4] INFO  org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2021-12-07 00:33:32.793 [http-nio-8888-exec-4] ERROR o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
 ### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
 ### The error may involve com.course.model.addUser-Inline
 ### The error occurred while setting parameters
@@ -92,11 +94,3 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2021-12-08 23:58:56.094 [http-nio-8888-exec-8] INFO  com.course.controller.UserManager - cookies验证通过
-2021-12-08 23:58:56.098 [http-nio-8888-exec-8] INFO  com.course.controller.UserManager - getUserInfo获取到的用户数量是1
-2021-12-08 23:58:56.269 [http-nio-8888-exec-6] INFO  com.course.controller.UserManager - cookies验证通过
-2021-12-08 23:58:56.273 [http-nio-8888-exec-6] INFO  com.course.controller.UserManager - getUserInfo获取到的用户数量是3
-2021-12-08 23:58:56.435 [http-nio-8888-exec-7] INFO  com.course.controller.UserManager - cookies验证通过
-2021-12-08 23:58:57.038 [http-nio-8888-exec-7] INFO  com.course.controller.UserManager - 更新数据的条目数为：1
-2021-12-08 23:58:57.201 [http-nio-8888-exec-9] INFO  com.course.controller.UserManager - cookies验证通过
-2021-12-08 23:58:57.237 [http-nio-8888-exec-9] INFO  com.course.controller.UserManager - 更新数据的条目数为：1
