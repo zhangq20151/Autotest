@@ -19,7 +19,7 @@ import java.io.IOException;
 public class AddUserTest {
 
     @Test(dependsOnGroups = "loginTrue",description = "添加用户接口测试")
-    public void addUser() throws IOException {
+    public void addUser() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         AddUserCase addUserCase = session.selectOne("addUserCase",1);
         System.out.println(addUserCase.toString());
@@ -27,10 +27,10 @@ public class AddUserTest {
 
         //发请求，获取结果
         String result = getResult(addUserCase);
-
         //验证返回结果
         User user = session.selectOne("addUser",addUserCase);
-        System.out.println(user.toString());
+        System.out.println(String.valueOf(user));
+//        System.out.println(user.toString());
         Assert.assertEquals(addUserCase.getExpected(),result);
 
     }
@@ -38,7 +38,7 @@ public class AddUserTest {
     private String getResult(AddUserCase addUserCase) throws IOException {
         HttpPost post = new HttpPost(TestConfig.addUserUrl);
         JSONObject param = new JSONObject();
-        param.put("username",addUserCase.getUserName());
+        param.put("userName",addUserCase.getUserName());
         param.put("password",addUserCase.getPassword());
         param.put("sex",addUserCase.getSex());
         param.put("age",addUserCase.getAge());

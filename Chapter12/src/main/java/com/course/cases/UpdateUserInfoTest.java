@@ -18,7 +18,7 @@ import java.io.IOException;
 public class UpdateUserInfoTest {
 
     @Test(dependsOnGroups = "loginTrue",description = "更改用户信息")
-    public void updateUserInfo() throws IOException {
+    public void updateUserInfo() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         UpdateUserInfoCase updateUserInfoCase = session.selectOne("updateUserInfoCase",1);
         System.out.println(updateUserInfoCase.toString());
@@ -27,15 +27,22 @@ public class UpdateUserInfoTest {
         int result = getResult(updateUserInfoCase);
         //验证
         User user = session.selectOne(updateUserInfoCase.getExpected(),updateUserInfoCase);
+//        System.out.println(user.toString());
+        System.out.println(String.valueOf(user));
 
         Assert.assertNotNull(user);
         Assert.assertNotNull(result);
+
+// 空指针错误,解决办法就是把事务的默认隔离级别设置成 "读已提交".
+// mysql> SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+
     }
 
 
 
     @Test(dependsOnGroups = "loginTrue",description = "删除用户信息")
-    public void deleteUser() throws IOException {
+    public void deleteUser() throws IOException, InterruptedException {
         SqlSession session = DatabaseUtil.getSqlSession();
         UpdateUserInfoCase updateUserInfoCase = session.selectOne("updateUserInfoCase",2);
         System.out.println(updateUserInfoCase.toString());
@@ -46,7 +53,8 @@ public class UpdateUserInfoTest {
         int result = getResult(updateUserInfoCase);
         //验证
         User user = session.selectOne(updateUserInfoCase.getExpected(),updateUserInfoCase);
-
+//        System.out.println(user.toString());
+        System.out.println(String.valueOf(user));
         Assert.assertNotNull(user);
         Assert.assertNotNull(result);
 
@@ -55,7 +63,7 @@ public class UpdateUserInfoTest {
     private int getResult(UpdateUserInfoCase updateUserInfoCase) throws IOException {
         HttpPost post = new HttpPost(TestConfig.updateUserInfoUrl);
         JSONObject param = new JSONObject();
-        param.put("id",updateUserInfoCase.getId());
+        param.put("id",updateUserInfoCase.getUserId());
         param.put("userName",updateUserInfoCase.getUserName());
         param.put("sex",updateUserInfoCase.getSex());
         param.put("age",updateUserInfoCase.getAge());

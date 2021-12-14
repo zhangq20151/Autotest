@@ -28,6 +28,7 @@ public class GetUserInfoTest {
         System.out.println(getUserInfoCase.toString());
         System.out.println(TestConfig.getUserInfoUrl);
 
+        //执行接口测试
         JSONArray resultJson = getJsonResult(getUserInfoCase);
 
         User user = session.selectOne(getUserInfoCase.getExpected(),getUserInfoCase);

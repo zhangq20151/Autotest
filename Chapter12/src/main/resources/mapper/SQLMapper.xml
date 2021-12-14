@@ -66,6 +66,9 @@
     <select id="getUpdateUserInfo" parameterType="com.course.model.UpdateUserInfoCase" resultType="com.course.model.User">
         select * from user
         <trim prefix="WHERE" prefixOverrides="and">
+            <if test="null !=userId and ''!=userId">
+                AND id=#{userId}
+            </if>
             <if test="null !=userName and ''!=userName">
                 AND userName=#{userName}
             </if>
@@ -82,7 +85,6 @@
                 AND isDelete=#{isDelete}
             </if>
         </trim>
-        And id = #{userId}
     </select>
 
 

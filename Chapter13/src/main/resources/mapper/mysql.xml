@@ -13,7 +13,7 @@
     <!--添加用户接口sql -->
     <insert id="addUser" parameterType="com.course.model.User">
         insert into
-        user(userName,password,sex.age,permission,isDelete)
+        user(userName,password,sex,age,permission,isDelete)
         values
         (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete})
     </insert>
