@@ -17,8 +17,36 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.course.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <extdirs>${project.basedir}/lib</extdirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+    <!--开发代码打包，打开Terminal终端，进入项目目录中，命令为mvn clean package，在target中生成 Chapter13-1.0-SNAPSHOT.jar 打包文件。可使用命令：java -jar  Chapter13-1.0-SNAPSHOT.jar，执行命令运行开发代码,-->
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -15,7 +15,7 @@
 
 		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>apiè‡ªåŠ¨åŒ–æµ‹è¯•æŠ¥å‘Š</title>
+	<title>api×Ô¶¯»¯²âÊÔ±¨¸æ</title>
 
 	<style type='text/css'>
 		.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
@@ -40,7 +40,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>apiè‡ªåŠ¨åŒ–æµ‹è¯•æŠ¥å‘Š</span>
+		<span class='report-name'>api×Ô¶¯»¯²âÊÔ±¨¸æ</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -49,7 +49,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Dec 15, 2021 01:00:35 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Dec 16, 2021 11:26:30 PM</span>
 				</a>
 			</li>
 			<li>
@@ -172,15 +172,15 @@
 				
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>getUserInfo</span>
-						<span class='test-time'>Dec 15, 2021 01:00:38 AM</span>
+						<span class='test-name'>addUser</span>
+						<span class='test-time'>Dec 16, 2021 11:26:33 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+236ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:33 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+297ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -194,15 +194,10 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
-					<td class='step-details'><pre>java.lang.AssertionError: Iterators differ at element [0]: [{"id":1,"userName":"zhangsan","password":"123456","age":"20","sex":"0","permission":"0","isDelete":"0"}] != {"password":"123456","isDelete":"0","sex":"0","permission":"0","id":1,"userName":"zhangsan","age":"20"} expected [[{"id":1,"userName":"zhangsan","password":"123456","age":"20","sex":"0","permission":"0","isDelete":"0"}]] but found [{"password":"123456","isDelete":"0","sex":"0","permission":"0","id":1,"userName":"zhangsan","age":"20"}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:611)
-	at org.testng.Assert.assertEquals(Assert.java:662)
-	at org.testng.Assert.assertEquals(Assert.java:637)
-	at com.course.cases.GetUserInfoTest.getUserInfo(GetUserInfoTest.java:40)
+					<td class='timestamp'>11:26:36 PM</td>
+					<td class='step-details'><pre>org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at com.course.cases.AddUserTest.addUser(AddUserTest.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -225,8 +220,18 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
 	at org.testng.TestNG.runSuites(TestNG.java:1133)
 	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
-	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:93)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
 </pre></td>
 				</tr>
 			</tbody>
@@ -239,14 +244,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>loginTrue</span>
-						<span class='test-time'>Dec 15, 2021 01:00:35 AM</span>
+						<span class='test-time'>Dec 16, 2021 11:26:30 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:35 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:37 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+860ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:30 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+683ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -265,7 +270,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -278,14 +283,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>loginFalse</span>
-						<span class='test-time'>Dec 15, 2021 01:00:37 AM</span>
+						<span class='test-time'>Dec 16, 2021 11:26:33 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:37 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:37 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+91ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:33 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+102ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
@@ -304,7 +309,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -316,15 +321,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
-						<span class='test-name'>addUser</span>
-						<span class='test-time'>Dec 15, 2021 01:00:37 AM</span>
+						<span class='test-name'>getUserInfo</span>
+						<span class='test-time'>Dec 16, 2021 11:26:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:37 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+193ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+234ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -338,7 +343,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -351,14 +356,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>getUserInfoList</span>
-						<span class='test-time'>Dec 15, 2021 01:00:38 AM</span>
+						<span class='test-time'>Dec 16, 2021 11:26:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+267ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+195ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -372,7 +377,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -385,14 +390,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>updateUserInfo</span>
-						<span class='test-time'>Dec 15, 2021 01:00:38 AM</span>
+						<span class='test-time'>Dec 16, 2021 11:26:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+362ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+234ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -406,7 +411,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -419,14 +424,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>deleteUser</span>
-						<span class='test-time'>Dec 15, 2021 01:00:38 AM</span>
+						<span class='test-time'>Dec 16, 2021 11:26:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Dec 15, 2021 01:00:38 AM</span>
-	<span class='label end-time'>Dec 15, 2021 01:00:39 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+137ms</span>
+	<span class='label start-time'>Dec 16, 2021 11:26:34 PM</span>
+	<span class='label end-time'>Dec 16, 2021 11:26:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+356ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -440,7 +445,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:00:39 AM</td>
+					<td class='timestamp'>11:26:36 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -523,7 +528,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 15, 2021 01:00:35 AM</td>
+										<td>Dec 16, 2021 11:26:30 PM</td>
 										<td class='linked' test-id='2'>loginTrue</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -557,7 +562,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 15, 2021 01:00:37 AM</td>
+										<td>Dec 16, 2021 11:26:33 PM</td>
 										<td class='linked' test-id='3'>loginFalse</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -605,7 +610,7 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-name'>org.apache.ibatis.exceptions.TooManyResultsException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -620,16 +625,11 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Dec 15, 2021 01:00:38 AM</td>
-                                                        <td class='linked' test-id='1'>getUserInfo</td>
-                                                        <td><pre><pre>java.lang.AssertionError: Iterators differ at element [0]: [{"id":1,"userName":"zhangsan","password":"123456","age":"20","sex":"0","permission":"0","isDelete":"0"}] != {"password":"123456","isDelete":"0","sex":"0","permission":"0","id":1,"userName":"zhangsan","age":"20"} expected [[{"id":1,"userName":"zhangsan","password":"123456","age":"20","sex":"0","permission":"0","isDelete":"0"}]] but found [{"password":"123456","isDelete":"0","sex":"0","permission":"0","id":1,"userName":"zhangsan","age":"20"}]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:611)
-	at org.testng.Assert.assertEquals(Assert.java:662)
-	at org.testng.Assert.assertEquals(Assert.java:637)
-	at com.course.cases.GetUserInfoTest.getUserInfo(GetUserInfoTest.java:40)
+                                                        <td>Dec 16, 2021 11:26:33 PM</td>
+                                                        <td class='linked' test-id='1'>addUser</td>
+                                                        <td><pre><pre>org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at com.course.cases.AddUserTest.addUser(AddUserTest.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -652,8 +652,18 @@
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
 	at org.testng.TestNG.runSuites(TestNG.java:1133)
 	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
-	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:93)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -692,19 +702,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 15, 2021 01:00:35 AM</div>
+					<div class='panel-lead'>Dec 16, 2021 11:26:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 15, 2021 01:00:37 AM</div>
+			 		<div class='panel-lead'>Dec 16, 2021 11:26:33 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>1,860ms</div>
+					<div class='panel-lead'>2,683ms</div>
 				</div>
 			</div>
 			<div class='col s4'>

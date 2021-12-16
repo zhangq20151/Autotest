@@ -36,8 +36,8 @@ public class GetUserInfoTest {
         List userList = new ArrayList();
         userList.add(user);
         JSONArray jsonArray = new JSONArray(userList);
-
-        Assert.assertEquals(jsonArray,resultJson);
+        JSONArray resultJson1 = new JSONArray(resultJson.getString(0));
+        Assert.assertEquals(jsonArray.toString(),resultJson1.toString());
 
 
     }
